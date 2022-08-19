@@ -55,6 +55,7 @@ const ContactListScreen = () => {
   const contactListRedux = useSelector(state => state.contactState.contactList);
   const [contactList, setContactList] = useState(contactListRedux);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [fakeRefresh, setFakeRefresh] = useState(false);
 
   //   useEffect(()=>{
   //     setContactList(contactListRedux)
@@ -63,10 +64,8 @@ const ContactListScreen = () => {
   const isFocused = useIsFocused();
 
   useEffect(() => {
-    setIsRefreshing(true);
-    setTimeout(() => {
-      setIsRefreshing(false);
-    }, 1000);
+    setFakeRefresh(true);
+    setFakeRefresh(false);
   }, [isFocused]);
 
   const createNewContact = () => {

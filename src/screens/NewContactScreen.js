@@ -112,16 +112,17 @@ const NewContactScreen = () => {
       </View>
 
       <View>
-        <View
+      <View
           style={{
             backgroundColor: 'white',
             justifyContent: 'center',
             alignItems: 'center',
+            height: 200,
           }}>
           <View
             style={{
-              height: 200,
-              width: 200,
+              height: screenHeight * 0.2,
+              width: screenHeight * 0.2,
               borderRadius: 200,
               backgroundColor: '#ff8c00',
             }}></View>
